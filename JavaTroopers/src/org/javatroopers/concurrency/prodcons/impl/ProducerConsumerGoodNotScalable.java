@@ -45,7 +45,7 @@ public class ProducerConsumerGoodNotScalable extends ProducerConsumer<Integer> {
 
 	public static void main(String[] args) {
 		ProducerConsumerGoodNotScalable app = new ProducerConsumerGoodNotScalable();
-//		app.start(1, 1);
-		app.start(1, 2);
+//		app.start(1, 1);	// This works fine, just 1 producer and 1 consumer
+		app.start(1, 2);	// Try this to see the problem
 	}
 }

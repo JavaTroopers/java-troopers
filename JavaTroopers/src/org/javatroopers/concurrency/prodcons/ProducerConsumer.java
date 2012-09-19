@@ -28,6 +28,27 @@ public abstract class ProducerConsumer<T> {
 			thread.setName("Consumer_" + i);
 			thread.start();
 		}
+		/*
+		//Using thread pools
+		Executor producersPool = Executors.newFixedThreadPool(10);
+		Executor consumersPool = Executors.newFixedThreadPool(10);
+		for (int i = 0; i < nProducers; i++) {
+			producersPool.execute(new Runnable() {
+				@Override
+				public void run() {
+					produce();
+				}
+			});
+		}
+		for (int i = 0; i < nConsumers; i++) {
+			consumersPool.execute(new Runnable() {
+				@Override
+				public void run() {
+					consume();
+				}
+			});
+		}
+		*/
 	}
 
 	protected void log(final Object msg) {
